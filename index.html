@@ -1,0 +1,109 @@
+<html>
+  <head>
+    <style>
+      header{
+        height: 10%; 
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-bottom: 2px solid black;
+
+      }
+       nav p{
+        color:rgb(182, 176, 176);
+        font-size: 20px;
+        cursor: pointer;
+      }
+      nav p:hover{
+        color: rgb(25, 125, 192);
+      }
+      nav button{
+        border: none;
+        padding: 18px 18px 18px 18px;
+        border-radius: 30%;
+        color: white;
+        background: linear-gradient(to right,lightblue,blue);
+      }
+      .cards{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 5px;
+
+      }
+      .card{
+        height: 200px;
+        border: 2px solid black;
+        margin: 5px 5px;
+      }
+      .card .card-up{
+        height: 70%;
+      }
+      .card a{
+        text-decoration: none;
+        color: rgb(39, 160, 216);
+      }
+    </style>
+  </head>
+  <body>
+    <header >
+      <div class="logo" style="display: flex;">
+        <img src="src/img/logo/logo.PNG" alt="logo" style="border-radius: 25%;">
+        <p>lorem ipsum</p>
+      </div>
+      <nav style="display: flex;justify-content: space-between;width: 30%;align-items: center;">
+        <div class="subject"><p>subject</p></div>
+        <div class="pyq-quizzes"><p>pyq Quizzes</p></div>
+        <div class="about"><p>About</p></div>
+        <div class="start-learning">
+          <button>Start Learning </button>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="cards">
+        <div class="card-1 card">
+          <div class="card-up"><p>OS</p></div>
+          <div class="card-down">
+            <a href="os/index.html" target="_blank"> Start Learning Now</a>
+          </div>
+          
+        </div>
+        <div class="card-2 card">
+          <p>Digital Logic</p>
+        </div>
+        <div class="card-3 card">
+          <p>Database Management System</p>
+        </div>
+        <div class="card-4 card">
+          <p>
+            Engineering Mathematics
+          </p>
+        </div>
+        <div class="card-5 card">
+          <p>
+            Algorithm
+          </p>
+        </div>
+        <div class="card-6 card">
+          <p>
+            Theory Of Computation
+          </p>
+        </div>
+        <div class="card-7 card">
+          <p>
+            Computer Network
+          </p>
+        </div>
+        <div class="card-8 card">
+          <p>General Aptitide</p>
+        </div>
+        <div class="card-9 card">
+          <p>Computer Organisation and Architecture</p>
+        </div>
+      </div>
+    </main>
+    <footer>
+
+    </footer>
+  </body>
+</html>
