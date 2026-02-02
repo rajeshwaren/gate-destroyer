@@ -1,109 +1,203 @@
-<html>
-  <head>
-    <style>
-      header{
-        height: 10%; 
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        border-bottom: 2px solid black;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning Platform</title>
 
-      }
-       nav p{
-        color:rgb(182, 176, 176);
-        font-size: 20px;
-        cursor: pointer;
-      }
-      nav p:hover{
-        color: rgb(25, 125, 192);
-      }
-      nav button{
-        border: none;
-        padding: 18px 18px 18px 18px;
-        border-radius: 30%;
-        color: white;
-        background: linear-gradient(to right,lightblue,blue);
-      }
-      .cards{
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-        gap: 5px;
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
 
-      }
-      .card{
-        height: 200px;
-        border: 2px solid black;
-        margin: 5px 5px;
-      }
-      .card .card-up{
-        height: 70%;
-      }
-      .card a{
-        text-decoration: none;
-        color: rgb(39, 160, 216);
-      }
-    </style>
-  </head>
-  <body>
-    <header >
-      <div class="logo" style="display: flex;">
-        <img src="src/img/logo/logo.PNG" alt="logo" style="border-radius: 25%;">
-        <p>lorem ipsum</p>
+    body {
+      background-color: #f9f9f9;
+    }
+
+    /* ---------- HEADER ---------- */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      border-bottom: 2px solid #ddd;
+      background-color: #fff;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo img {
+      width: 45px;
+      height: 45px;
+      border-radius: 25%;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #aaa;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: rgb(25, 125, 192);
+    }
+
+    nav button {
+      border: none;
+      padding: 12px 22px;
+      border-radius: 25px;
+      color: white;
+      cursor: pointer;
+      background: linear-gradient(to right, lightblue, blue);
+      transition: transform 0.2s;
+    }
+
+    nav button:hover {
+      transform: scale(1.05);
+    }
+
+    /* ---------- MAIN ---------- */
+    main {
+      padding: 40px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .card-up {
+      height: 120px;
+      background: linear-gradient(to right, #e3f2fd, #bbdefb);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .card-down {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .card-down a {
+      text-decoration: none;
+      color: rgb(39, 160, 216);
+      font-weight: bold;
+    }
+
+    .card-down a:hover {
+      text-decoration: underline;
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #777;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="src/img/logo/logo.PNG" alt="logo">
+      <p>Lorem Ipsum</p>
+    </div>
+
+    <nav>
+      <a href="#">Subjects</a>
+      <a href="#">PYQ Quizzes</a>
+      <a href="#">About</a>
+      <button>Start Learning</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="cards">
+      <div class="card">
+        <div class="card-up">OS</div>
+        <div class="card-down">
+          <a href="os/index.html" target="_blank">Start Learning</a>
+        </div>
       </div>
-      <nav style="display: flex;justify-content: space-between;width: 30%;align-items: center;">
-        <div class="subject"><p>subject</p></div>
-        <div class="pyq-quizzes"><p>pyq Quizzes</p></div>
-        <div class="about"><p>About</p></div>
-        <div class="start-learning">
-          <button>Start Learning </button>
-        </div>
-      </nav>
-    </header>
-    <main>
-      <div class="cards">
-        <div class="card-1 card">
-          <div class="card-up"><p>OS</p></div>
-          <div class="card-down">
-            <a href="os/index.html" target="_blank"> Start Learning Now</a>
-          </div>
-          
-        </div>
-        <div class="card-2 card">
-          <p>Digital Logic</p>
-        </div>
-        <div class="card-3 card">
-          <p>Database Management System</p>
-        </div>
-        <div class="card-4 card">
-          <p>
-            Engineering Mathematics
-          </p>
-        </div>
-        <div class="card-5 card">
-          <p>
-            Algorithm
-          </p>
-        </div>
-        <div class="card-6 card">
-          <p>
-            Theory Of Computation
-          </p>
-        </div>
-        <div class="card-7 card">
-          <p>
-            Computer Network
-          </p>
-        </div>
-        <div class="card-8 card">
-          <p>General Aptitide</p>
-        </div>
-        <div class="card-9 card">
-          <p>Computer Organisation and Architecture</p>
-        </div>
-      </div>
-    </main>
-    <footer>
 
-    </footer>
-  </body>
+      <div class="card">
+        <div class="card-up">Digital Logic</div>
+        <div class="card-down"><a href="#">Start Learning</a></div>
+      </div>
+
+      <div class="card">
+        <div class="card-up">DBMS</div>
+        <div class="card-down"><a href="#">Start Learning</a></div>
+      </div>
+
+      <div class="card">
+        <div class="card-up">Mathematics</div>
+        <div class="card-down"><a href="#">Start Learning</a></div>
+      </div>
+
+      <div class="card">
+        <div class="card-up">Algorithms</div>
+        <div class="card-down"><a href="#">Start Learning</a></div>
+      </div>
+
+      <div class="card">
+        <div class="card-up">TOC</div>
+        <div class="card-down"><a href="#">Start Learning</a></div>
+      </div>
+
+      <div class="card">
+        <div class="card-up">CN</div>
+        <div class="card-down"><a href="#">Start Learning</a></div>
+      </div>
+
+      <div class="card">
+        <div class="card-up">Aptitude</div>
+        <div class="card-down"><a href="#">Start Learning</a></div>
+      </div>
+
+      <div class="card">
+        <div class="card-up">COA</div>
+        <div class="card-down"><a href="#">Start Learning</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Learning Platform. All rights reserved.
+  </footer>
+
+</body>
 </html>
